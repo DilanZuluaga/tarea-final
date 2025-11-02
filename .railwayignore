@@ -1,0 +1,39 @@
+# Railway ignore file
+# Estos archivos no se subirán a Railway
+
+# Development
+node_modules/
+.vscode/
+.idea/
+
+# Build artifacts (se generan durante el build)
+dist/
+dist-ssr/
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env.local
+.env.development.local
+.env.test.local
+
+# Testing
+coverage/
+.nyc_output/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Documentation (opcional, pero para ahorrar espacio)
+*.md
+!RAILWAY.md
+
+# Otros
+.eslintcache

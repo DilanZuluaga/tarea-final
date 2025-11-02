@@ -19,14 +19,21 @@ RUN npm run build
 # Etapa 2: Servidor de producción con Nginx
 FROM nginx:alpine
 
-# Copiar la configuración personalizada de Nginx
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Instalar gettext para envsubst (sustitución de variables)
+RUN apk add --no-cache gettext
+
+# Copiar la plantilla de configuración de Nginx
+COPY nginx.conf.template /etc/nginx/templates/default.conf.template
 
 # Copiar los archivos construidos desde la etapa anterior
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Exponer el puerto 80
-EXPOSE 80
+# Copiar script de inicio
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
 
-# Comando para iniciar Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Exponer el puerto (Railway lo asignará dinámicamente)
+EXPOSE ${PORT:-80}
+
+# Comando para iniciar con el script personalizado
+CMD ["/docker-entrypoint.sh"]

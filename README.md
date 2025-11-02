@@ -111,16 +111,49 @@ El proyecto está optimizado para:
 - Tablet: 1024px a 1920px
 - Mobile: Menos de 1024px
 
-## 🚀 Próximas Pantallas
+## ✅ Pantallas Implementadas
 
-- [ ] Calificaciones
-- [ ] Horario
-- [ ] Notificaciones
-- [ ] Ubicación de Salones
-- [ ] Materias y Profesores
-- [ ] Recursos Virtuales
-- [ ] Gestión Administrativa
-- [ ] Perfil del Estudiante
+- [x] Inicio/Dashboard
+- [x] Calificaciones (con acordeones por materia y cortes)
+- [x] Horario
+- [x] Notificaciones
+- [x] Ubicación de Salones
+- [x] Materias y Profesores
+- [x] Recursos Virtuales (con descarga de PDFs)
+- [x] Gestión Administrativa (con descarga de documentos)
+- [x] Perfil del Estudiante
+
+## 🐳 Docker
+
+### Ejecutar con Docker
+
+```bash
+# Construir la imagen
+docker build -t plataforma-academica .
+
+# Ejecutar el contenedor
+docker run -d -p 3000:80 --name plataforma-academica plataforma-academica:latest
+
+# Ver en: http://localhost:3000
+```
+
+Ver documentación completa en [DOCKER.md](DOCKER.md)
+
+## 🚂 Desplegar en Railway
+
+El proyecto está optimizado para Railway con despliegue en un click:
+
+```bash
+# Instalar Railway CLI
+npm install -g @railway/cli
+
+# Login y desplegar
+railway login
+railway init
+railway up
+```
+
+Ver guía completa en [RAILWAY.md](RAILWAY.md)
 
 ## 📄 Licencia
 

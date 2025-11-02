@@ -43,11 +43,13 @@ logs
 
 # Docker
 .dockerignore
+.railwayignore
 
 # Documentation
 README.md
 CLAUDE.md
 DOCKER.md
+RAILWAY.md
 
 # Otros
 .eslintcache
