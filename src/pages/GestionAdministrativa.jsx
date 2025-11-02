@@ -28,23 +28,26 @@ export default function GestionAdministrativa() {
       <Header />
       
       <div className="gestion-administrativa__content">
-        <div className="gestion-administrativa__header">
-          <MdAdminPanelSettings className="gestion-administrativa__icon" />
-          <h1>GESTIÓN ADMINISTRATIVA</h1>
+        <div className="gestion-administrativa__left">
+          <div className="gestion-administrativa__header">
+            <MdAdminPanelSettings className="gestion-administrativa__icon" />
+            <h1>GESTIÓN ADMINISTRATIVA</h1>
+          </div>
+          
+          <div className="gestion-administrativa__student-info">
+            <p>
+              <span className="gestion-administrativa__label">Nombre del Estudiante:</span>
+              <span className="gestion-administrativa__value">Alverto Benavidez</span>
+            </p>
+            <p>
+              <span className="gestion-administrativa__label">Estado:</span>
+              <span className="gestion-administrativa__value">Activo</span>
+            </p>
+          </div>
         </div>
         
-        <div className="gestion-administrativa__student-info">
-          <p>
-            <span className="gestion-administrativa__label">Nombre del Estudiante:</span>
-            <span className="gestion-administrativa__value">Alverto Benavidez</span>
-          </p>
-          <p>
-            <span className="gestion-administrativa__label">Estado:</span>
-            <span className="gestion-administrativa__value">Activo</span>
-          </p>
-        </div>
-        
-        <div className="gestion-administrativa__table">
+        <div className="gestion-administrativa__right">
+          <div className="gestion-administrativa__table">
           <div className="gestion-administrativa__table-header">
             <div className="gestion-administrativa__table-col">NÚMERO DE DOCUMENTO</div>
             <div className="gestion-administrativa__table-col">FECHA</div>
@@ -62,15 +65,16 @@ export default function GestionAdministrativa() {
               </div>
             ))}
           </div>
-        </div>
-        
-        <div className="gestion-administrativa__actions">
-          <button className="gestion-administrativa__button">
-            Solicitar Nuevo Documento
-          </button>
-          <button className="gestion-administrativa__button gestion-administrativa__button--secondary">
-            Descargar Historial
-          </button>
+          </div>
+          
+          <div className="gestion-administrativa__actions">
+            <button className="gestion-administrativa__button">
+              Solicitar Nuevo Documento
+            </button>
+            <button className="gestion-administrativa__button gestion-administrativa__button--secondary">
+              Descargar Historial
+            </button>
+          </div>
         </div>
       </div>
     </div>

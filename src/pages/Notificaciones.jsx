@@ -47,23 +47,26 @@ export default function Notificaciones() {
       <Header />
       
       <div className="notificaciones__content">
-        <div className="notificaciones__header">
-          <IoNotificationsSharp className="notificaciones__icon" />
-          <h1>NOTIFICACIONES</h1>
+        <div className="notificaciones__left">
+          <div className="notificaciones__header">
+            <IoNotificationsSharp className="notificaciones__icon" />
+            <h1>NOTIFICACIONES</h1>
+          </div>
+          
+          <div className="notificaciones__student-info">
+            <p>
+              <span className="notificaciones__label">Nombre del Estudiante:</span>
+              <span className="notificaciones__value">Alverto Benavidez</span>
+            </p>
+            <p>
+              <span className="notificaciones__label">Estado:</span>
+              <span className="notificaciones__value">Activo</span>
+            </p>
+          </div>
         </div>
         
-        <div className="notificaciones__student-info">
-          <p>
-            <span className="notificaciones__label">Nombre del Estudiante:</span>
-            <span className="notificaciones__value">Alverto Benavidez</span>
-          </p>
-          <p>
-            <span className="notificaciones__label">Estado:</span>
-            <span className="notificaciones__value">Activo</span>
-          </p>
-        </div>
-        
-        <div className="notificaciones__lista">
+        <div className="notificaciones__right">
+          <div className="notificaciones__lista">
           {notificaciones.map((grupo, index) => (
             <div key={index} className="notificaciones__grupo">
               <h2 className="notificaciones__fecha">{grupo.fecha}</h2>
@@ -72,11 +75,7 @@ export default function Notificaciones() {
                 {grupo.items.map((item, itemIndex) => (
                   <div key={itemIndex} className="notificaciones__item">
                     <div className="notificaciones__item-icon">
-                      {item.tipo === 'correo' ? (
-                        <MdEmail />
-                      ) : (
-                        <IoNotificationsSharp />
-                      )}
+                      <MdEmail />
                     </div>
                     <div className="notificaciones__item-content">
                       <h3>{item.titulo}</h3>
@@ -88,6 +87,7 @@ export default function Notificaciones() {
               </div>
             </div>
           ))}
+          </div>
         </div>
       </div>
     </div>

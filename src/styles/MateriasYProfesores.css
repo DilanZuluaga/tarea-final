@@ -9,14 +9,30 @@
 
 .materias-profesores__content {
   flex: 1;
+  display: flex;
   overflow-y: auto;
   padding: 40px;
+  gap: 60px;
+}
+
+.materias-profesores__left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.materias-profesores__right {
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .materias-profesores__header {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 20px;
   margin-bottom: 40px;
 }
@@ -35,11 +51,7 @@
 }
 
 .materias-profesores__student-info {
-  max-width: 1400px;
-  margin: 0 auto 40px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
 }
 
 .materias-profesores__student-info p {
@@ -59,8 +71,8 @@
 }
 
 .materias-profesores__table {
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 16px;
   overflow: hidden;
@@ -114,6 +126,11 @@
 }
 
 @media (max-width: 1024px) {
+  .materias-profesores__content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
   .materias-profesores__header h1 {
     font-size: 38px;
   }

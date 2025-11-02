@@ -287,3 +287,4 @@ Puedo:
 *Generado automáticamente por análisis de Figma y Chrome DevTools*
 
 
+

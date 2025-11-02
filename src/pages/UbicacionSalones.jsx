@@ -41,23 +41,26 @@ export default function UbicacionSalones() {
       <Header />
       
       <div className="ubicacion-salones__content">
-        <div className="ubicacion-salones__header">
-          <MdLocationOn className="ubicacion-salones__icon" />
-          <h1>UBICACIÓN DE SALONES</h1>
+        <div className="ubicacion-salones__left">
+          <div className="ubicacion-salones__header">
+            <MdLocationOn className="ubicacion-salones__icon" />
+            <h1>UBICACIÓN DE SALONES</h1>
+          </div>
+          
+          <div className="ubicacion-salones__student-info">
+            <p>
+              <span className="ubicacion-salones__label">Nombre del Estudiante:</span>
+              <span className="ubicacion-salones__value">Alverto Benavidez</span>
+            </p>
+            <p>
+              <span className="ubicacion-salones__label">Estado:</span>
+              <span className="ubicacion-salones__value">Activo</span>
+            </p>
+          </div>
         </div>
         
-        <div className="ubicacion-salones__student-info">
-          <p>
-            <span className="ubicacion-salones__label">Nombre del Estudiante:</span>
-            <span className="ubicacion-salones__value">Alverto Benavidez</span>
-          </p>
-          <p>
-            <span className="ubicacion-salones__label">Estado:</span>
-            <span className="ubicacion-salones__value">Activo</span>
-          </p>
-        </div>
-        
-        <div className="ubicacion-salones__lista">
+        <div className="ubicacion-salones__right">
+          <div className="ubicacion-salones__lista">
           {salones.map((salon, index) => (
             <div key={index} className="ubicacion-salones__item">
               <div className="ubicacion-salones__item-header">
@@ -87,6 +90,7 @@ export default function UbicacionSalones() {
               </div>
             </div>
           ))}
+          </div>
         </div>
       </div>
     </div>

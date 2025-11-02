@@ -3,11 +3,11 @@ import Header from '../components/Header'
 import '../styles/Horario.css'
 import { BsCalendar3 } from 'react-icons/bs'
 
-// Imágenes de las clases - Usando biologia.png local (correcto) y temporalmente Freepik para las demás
+// Imágenes de las clases desde assets locales
 const imgBiologia = "/assets/horario/biologia.png"
-const imgProgramacion = "https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg"
-const imgGestion = "https://img.freepik.com/free-vector/business-team-working-cogwheel-mechanism-together_74855-6667.jpg"
-const imgTelecomunicaciones = "https://img.freepik.com/free-vector/customer-service-concept-illustration_114360-1919.jpg"
+const imgProgramacion = "/assets/horario/programacion-nueva.png"
+const imgGestion = "/assets/horario/gestion-nueva.png"
+const imgTelecomunicaciones = "/assets/horario/telecom-nueva.png"
 
 export default function Horario() {
   const clasesHoy = [

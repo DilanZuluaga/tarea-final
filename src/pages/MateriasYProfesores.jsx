@@ -28,23 +28,26 @@ export default function MateriasYProfesores() {
       <Header />
       
       <div className="materias-profesores__content">
-        <div className="materias-profesores__header">
-          <FaChalkboardTeacher className="materias-profesores__icon" />
-          <h1>MATERIAS Y PROFESORES</h1>
+        <div className="materias-profesores__left">
+          <div className="materias-profesores__header">
+            <FaChalkboardTeacher className="materias-profesores__icon" />
+            <h1>MATERIAS Y PROFESORES</h1>
+          </div>
+          
+          <div className="materias-profesores__student-info">
+            <p>
+              <span className="materias-profesores__label">Nombre del Estudiante:</span>
+              <span className="materias-profesores__value">Alverto Benavidez</span>
+            </p>
+            <p>
+              <span className="materias-profesores__label">Estado:</span>
+              <span className="materias-profesores__value">Activo</span>
+            </p>
+          </div>
         </div>
         
-        <div className="materias-profesores__student-info">
-          <p>
-            <span className="materias-profesores__label">Nombre del Estudiante:</span>
-            <span className="materias-profesores__value">Alverto Benavidez</span>
-          </p>
-          <p>
-            <span className="materias-profesores__label">Estado:</span>
-            <span className="materias-profesores__value">Activo</span>
-          </p>
-        </div>
-        
-        <div className="materias-profesores__table">
+        <div className="materias-profesores__right">
+          <div className="materias-profesores__table">
           <div className="materias-profesores__table-header">
             <div className="materias-profesores__table-col">MATERIA</div>
             <div className="materias-profesores__table-col">PROFESOR</div>
@@ -61,6 +64,7 @@ export default function MateriasYProfesores() {
                 </div>
               </div>
             ))}
+          </div>
           </div>
         </div>
       </div>

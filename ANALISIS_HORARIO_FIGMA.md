@@ -178,3 +178,4 @@ Si las imágenes locales no son las correctas, necesitaremos:
 **Conclusión:** Se requiere actualizar `src/pages/Horario.jsx` para usar las imágenes locales y verificar/reemplazar la imagen de Gestión Empresarial que no coincide con el diseño de Figma.
 
 
+

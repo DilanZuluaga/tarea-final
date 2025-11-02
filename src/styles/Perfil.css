@@ -19,6 +19,7 @@
   justify-content: center;
   gap: 20px;
   margin-bottom: 60px;
+  flex-wrap: wrap;
 }
 
 .perfil__header-icon {

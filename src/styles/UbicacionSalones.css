@@ -9,14 +9,29 @@
 
 .ubicacion-salones__content {
   flex: 1;
+  display: flex;
   overflow-y: auto;
   padding: 40px;
+  gap: 60px;
+}
+
+.ubicacion-salones__left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ubicacion-salones__right {
+  flex: 1.5;
+  overflow-y: auto;
+  padding-right: 20px;
 }
 
 .ubicacion-salones__header {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 20px;
   margin-bottom: 40px;
 }
@@ -35,11 +50,7 @@
 }
 
 .ubicacion-salones__student-info {
-  max-width: 1400px;
-  margin: 0 auto 40px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
 }
 
 .ubicacion-salones__student-info p {
@@ -126,6 +137,11 @@
 }
 
 @media (max-width: 1024px) {
+  .ubicacion-salones__content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
   .ubicacion-salones__header h1 {
     font-size: 42px;
   }
