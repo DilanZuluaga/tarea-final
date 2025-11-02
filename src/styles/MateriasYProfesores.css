@@ -1,0 +1,181 @@
+.materias-profesores {
+  width: 100%;
+  height: 100vh;
+  background-color: #e9e6e6;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.materias-profesores__content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 40px;
+}
+
+.materias-profesores__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.materias-profesores__icon {
+  width: 133px;
+  height: 115px;
+  color: #00457a;
+}
+
+.materias-profesores__header h1 {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 52px;
+  font-weight: bold;
+  color: #00457a;
+}
+
+.materias-profesores__student-info {
+  max-width: 1400px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+}
+
+.materias-profesores__student-info p {
+  margin: 5px 0;
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 16px;
+  color: #00457a;
+}
+
+.materias-profesores__label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.materias-profesores__value {
+  font-weight: normal;
+}
+
+.materias-profesores__table {
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.materias-profesores__table-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: linear-gradient(135deg, #00457a 0%, #0066b3 100%);
+  padding: 25px 30px;
+}
+
+.materias-profesores__table-col {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.materias-profesores__table-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.materias-profesores__table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 25px 30px;
+  border-bottom: 1px solid rgba(0, 69, 122, 0.1);
+  transition: all 0.3s ease;
+}
+
+.materias-profesores__table-row:last-child {
+  border-bottom: none;
+}
+
+.materias-profesores__table-row:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.materias-profesores__table-cell {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 18px;
+  color: #00457a;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .materias-profesores__header h1 {
+    font-size: 38px;
+  }
+  
+  .materias-profesores__icon {
+    width: 100px;
+    height: 87px;
+  }
+  
+  .materias-profesores__table-header,
+  .materias-profesores__table-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .materias-profesores__table-col,
+  .materias-profesores__table-cell {
+    text-align: left;
+    justify-content: flex-start;
+  }
+  
+  .materias-profesores__table-col::before {
+    content: '';
+    display: none;
+  }
+  
+  .materias-profesores__table-cell::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .materias-profesores__content {
+    padding: 20px;
+  }
+  
+  .materias-profesores__header {
+    flex-direction: column;
+  }
+  
+  .materias-profesores__header h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .materias-profesores__table-header {
+    padding: 20px;
+  }
+  
+  .materias-profesores__table-col {
+    font-size: 18px;
+  }
+  
+  .materias-profesores__table-row {
+    padding: 20px;
+  }
+  
+  .materias-profesores__table-cell {
+    font-size: 14px;
+  }
+}
+
+

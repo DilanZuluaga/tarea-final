@@ -1,0 +1,180 @@
+.ubicacion-salones {
+  width: 100%;
+  height: 100vh;
+  background-color: #e9e6e6;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ubicacion-salones__content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 40px;
+}
+
+.ubicacion-salones__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.ubicacion-salones__icon {
+  width: 127px;
+  height: 123px;
+  color: #00457a;
+}
+
+.ubicacion-salones__header h1 {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 56px;
+  font-weight: bold;
+  color: #00457a;
+}
+
+.ubicacion-salones__student-info {
+  max-width: 1400px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+}
+
+.ubicacion-salones__student-info p {
+  margin: 5px 0;
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 16px;
+  color: #00457a;
+}
+
+.ubicacion-salones__label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.ubicacion-salones__value {
+  font-weight: normal;
+}
+
+.ubicacion-salones__lista {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ubicacion-salones__item {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.ubicacion-salones__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.ubicacion-salones__item-header {
+  background: linear-gradient(135deg, #00457a 0%, #0066b3 100%);
+  padding: 20px 30px;
+}
+
+.ubicacion-salones__item-header h2 {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.ubicacion-salones__item-body {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ubicacion-salones__info-row {
+  display: flex;
+  gap: 10px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 69, 122, 0.1);
+}
+
+.ubicacion-salones__info-row:last-child {
+  border-bottom: none;
+}
+
+.ubicacion-salones__info-label {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00457a;
+  min-width: 120px;
+}
+
+.ubicacion-salones__info-value {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 18px;
+  color: #00457a;
+  flex: 1;
+}
+
+@media (max-width: 1024px) {
+  .ubicacion-salones__header h1 {
+    font-size: 42px;
+  }
+  
+  .ubicacion-salones__icon {
+    width: 100px;
+    height: 97px;
+  }
+  
+  .ubicacion-salones__info-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .ubicacion-salones__info-label {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .ubicacion-salones__content {
+    padding: 20px;
+  }
+  
+  .ubicacion-salones__header {
+    flex-direction: column;
+  }
+  
+  .ubicacion-salones__header h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .ubicacion-salones__item-header {
+    padding: 15px 20px;
+  }
+  
+  .ubicacion-salones__item-header h2 {
+    font-size: 20px;
+  }
+  
+  .ubicacion-salones__item-body {
+    padding: 20px;
+  }
+  
+  .ubicacion-salones__info-label,
+  .ubicacion-salones__info-value {
+    font-size: 14px;
+  }
+}
+
+

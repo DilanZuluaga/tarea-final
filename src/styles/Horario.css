@@ -1,0 +1,200 @@
+.horario {
+  width: 100%;
+  height: 100vh;
+  background-color: #e9e6e6;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.horario__content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 40px;
+}
+
+.horario__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.horario__icon {
+  width: 131px;
+  height: 118px;
+  color: #00457a;
+}
+
+.horario__header h1 {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 64px;
+  font-weight: bold;
+  color: #00457a;
+}
+
+.horario__student-info {
+  max-width: 1400px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+}
+
+.horario__student-info p {
+  margin: 5px 0;
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 16px;
+  color: #00457a;
+}
+
+.horario__label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.horario__value {
+  font-weight: normal;
+}
+
+.horario__sections {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.horario__section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.horario__section-title {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #00457a;
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(0, 69, 122, 0.1);
+  border-radius: 10px;
+}
+
+.horario__clases {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.horario__clase-card {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.horario__clase-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.horario__clase-imagen {
+  width: 163px;
+  height: 109px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  flex-shrink: 0;
+}
+
+.horario__clase-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.horario__clase-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.horario__clase-info h3 {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #00457a;
+  margin-bottom: 5px;
+}
+
+.horario__clase-info p {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 16px;
+  color: #00457a;
+  margin: 0;
+}
+
+.horario__clase-info p strong {
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .horario__header h1 {
+    font-size: 48px;
+  }
+  
+  .horario__icon {
+    width: 100px;
+    height: 90px;
+  }
+  
+  .horario__clase-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .horario__clase-imagen {
+    width: 150px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .horario__content {
+    padding: 20px;
+  }
+  
+  .horario__header {
+    flex-direction: column;
+  }
+  
+  .horario__header h1 {
+    font-size: 36px;
+  }
+  
+  .horario__section-title {
+    font-size: 20px;
+  }
+  
+  .horario__clase-card {
+    padding: 20px;
+  }
+  
+  .horario__clase-info h3 {
+    font-size: 20px;
+  }
+  
+  .horario__clase-info p {
+    font-size: 14px;
+  }
+}
+
+

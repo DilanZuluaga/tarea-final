@@ -1,0 +1,122 @@
+.bienvenida {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bienvenida__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bienvenida__background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bienvenida__container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1207px;
+  padding: 20px;
+}
+
+.bienvenida__card {
+  background: rgba(244, 244, 244, 0.85);
+  border-radius: 23px;
+  padding: 60px 80px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 676px;
+  max-width: 1207px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
+
+.bienvenida__logo {
+  width: 282px;
+  height: 103px;
+  margin-bottom: 40px;
+}
+
+.bienvenida__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.bienvenida__illustration {
+  width: 299px;
+  height: 283px;
+  margin-bottom: 60px;
+}
+
+.bienvenida__illustration img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.bienvenida__button {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 15px 50px;
+  background: #ffffff;
+  color: #00457a;
+  border: 1.2px solid #00457a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 249px;
+}
+
+.bienvenida__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: #f9f9f9;
+}
+
+.bienvenida__button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .bienvenida__card {
+    padding: 40px 30px;
+    min-height: auto;
+  }
+  
+  .bienvenida__logo {
+    width: 220px;
+    height: 80px;
+  }
+  
+  .bienvenida__illustration {
+    width: 230px;
+    height: 218px;
+    margin-bottom: 40px;
+  }
+  
+  .bienvenida__button {
+    font-size: 18px;
+    padding: 12px 40px;
+  }
+}
+
+

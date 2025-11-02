@@ -1,0 +1,157 @@
+.login {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.login__background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.login__container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1207px;
+  padding: 20px;
+}
+
+.login__card {
+  background: #f4f4f4;
+  border-radius: 23px;
+  padding: 60px 80px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 676px;
+  max-width: 1207px;
+  width: 100%;
+}
+
+.login__logo {
+  width: 282px;
+  height: 103px;
+  margin-bottom: 30px;
+}
+
+.login__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.login__form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.login__title {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #00457a;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login__field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login__field label {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #00457a;
+}
+
+.login__field input {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 16px;
+  padding: 15px 20px;
+  border: 1.2px solid #00457a;
+  border-radius: 8px;
+  background-color: #f6f6f6;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.login__field input:focus {
+  outline: none;
+  border-color: #00457a;
+  background-color: #fff;
+}
+
+.login__button {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 15px 40px;
+  background: #ffffff;
+  color: #00457a;
+  border: 1.2px solid #00457a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: #f9f9f9;
+}
+
+.login__button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .login__card {
+    padding: 40px 30px;
+    min-height: auto;
+  }
+  
+  .login__logo {
+    width: 200px;
+    height: 73px;
+  }
+  
+  .login__illustration {
+    width: 220px;
+    height: 208px;
+  }
+  
+  .login__title {
+    font-size: 22px;
+  }
+  
+  .login__field label,
+  .login__field input {
+    font-size: 14px;
+  }
+}

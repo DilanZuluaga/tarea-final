@@ -1,0 +1,220 @@
+.calificaciones-corte {
+  width: 100%;
+  height: 100vh;
+  background-color: #e9e6e6;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.calificaciones-corte__content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 40px;
+}
+
+.calificaciones-corte__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  text-decoration: none;
+  color: #00457a;
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.calificaciones-corte__back:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: translateX(-5px);
+}
+
+.calificaciones-corte__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.calificaciones-corte__icon {
+  width: 91px;
+  height: 100px;
+  color: #00457a;
+}
+
+.calificaciones-corte__header h1 {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 52px;
+  font-weight: bold;
+  color: #00457a;
+}
+
+.calificaciones-corte__student-info {
+  max-width: 1400px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+}
+
+.calificaciones-corte__student-info p {
+  margin: 5px 0;
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 16px;
+  color: #00457a;
+}
+
+.calificaciones-corte__label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.calificaciones-corte__value {
+  font-weight: normal;
+}
+
+.calificaciones-corte__materias {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.calificaciones-corte__materia-card {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.calificaciones-corte__materia-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.calificaciones-corte__materia-imagen {
+  width: 236px;
+  height: 157px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  flex-shrink: 0;
+}
+
+.calificaciones-corte__materia-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.calificaciones-corte__materia-titles h2 {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #00457a;
+  margin-bottom: 10px;
+}
+
+.calificaciones-corte__materia-titles h3 {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #00457a;
+}
+
+.calificaciones-corte__notas-table {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.calificaciones-corte__nota-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.calificaciones-corte__nota-row:hover {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calificaciones-corte__nota-nombre {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #00457a;
+}
+
+.calificaciones-corte__nota-valor {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #00a651;
+  min-width: 80px;
+  text-align: right;
+}
+
+.calificaciones-corte__nota-valor--na {
+  color: #999;
+  font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+  .calificaciones-corte__header h1 {
+    font-size: 38px;
+  }
+  
+  .calificaciones-corte__materia-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .calificaciones-corte__materia-imagen {
+    width: 200px;
+    height: 133px;
+  }
+}
+
+@media (max-width: 768px) {
+  .calificaciones-corte__content {
+    padding: 20px;
+  }
+  
+  .calificaciones-corte__header {
+    flex-direction: column;
+  }
+  
+  .calificaciones-corte__header h1 {
+    font-size: 28px;
+  }
+  
+  .calificaciones-corte__materia-card {
+    padding: 20px;
+  }
+  
+  .calificaciones-corte__nota-row {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .calificaciones-corte__nota-valor {
+    text-align: center;
+  }
+}
+
+
