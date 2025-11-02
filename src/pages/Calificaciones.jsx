@@ -1,28 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Header from '../components/Header'
+import AcordeonCalificaciones from '../components/AcordeonCalificaciones'
 import '../styles/Calificaciones.css'
 import { HiClipboardList } from 'react-icons/hi'
+import { materias, calificacionesCorteI } from '../data/mockCalificaciones'
 
 export default function Calificaciones() {
-  const materias = [
-    { nombre: "BIOLOGÍA MECÁNICA", link: "/calificaciones/general" },
-    { nombre: "PROGRAMACIÓN III", link: "/calificaciones/general" },
-    { nombre: "GESTIÓN EMPRESARIAL", link: "/calificaciones/general" },
-    { nombre: "TELECOMUNICACIONES", link: "/calificaciones/general" }
-  ]
-
   return (
     <div className="calificaciones">
       <Header />
-      
+
       <div className="calificaciones__content">
-        <div className="calificaciones__left">
-          <div className="calificaciones__header">
+        <div className="calificaciones__header-section">
+          <div className="calificaciones__title-container">
             <HiClipboardList className="calificaciones__icon" />
             <h1>CALIFICACIONES</h1>
           </div>
-          
+
           <div className="calificaciones__student-info">
             <p>
               <span className="calificaciones__label">Nombre del Estudiante:</span>
@@ -33,21 +28,39 @@ export default function Calificaciones() {
               <span className="calificaciones__value">Activo</span>
             </p>
           </div>
+
+          <p className="calificaciones__subtitle">Calificaciones del Corte I por Materia</p>
         </div>
-        
-        <div className="calificaciones__right">
-          <div className="calificaciones__materias-grid">
-            {materias.map((materia, index) => (
-              <Link 
-                key={index} 
-                to={materia.link} 
-                className="calificaciones__materia-button"
-              >
-                <HiClipboardList className="calificaciones__materia-icon" />
-                <span>{materia.nombre}</span>
-              </Link>
-            ))}
-          </div>
+
+        <div className="calificaciones__acordeones">
+          <AcordeonCalificaciones
+            calificaciones={calificacionesCorteI.biologia}
+            titulo={materias[0].nombre}
+          />
+          <AcordeonCalificaciones
+            calificaciones={calificacionesCorteI.programacion}
+            titulo={materias[1].nombre}
+          />
+          <AcordeonCalificaciones
+            calificaciones={calificacionesCorteI.gestion}
+            titulo={materias[2].nombre}
+          />
+          <AcordeonCalificaciones
+            calificaciones={calificacionesCorteI.telecomunicaciones}
+            titulo={materias[3].nombre}
+          />
+        </div>
+
+        <div className="calificaciones__navigation">
+          <Link to="/calificaciones/corte/1" className="calificaciones__nav-link">
+            Ver detalles del Corte I
+          </Link>
+          <Link to="/calificaciones/corte/2" className="calificaciones__nav-link">
+            Ver detalles del Corte II
+          </Link>
+          <Link to="/calificaciones/corte/3" className="calificaciones__nav-link">
+            Ver detalles del Corte III
+          </Link>
         </div>
       </div>
     </div>
