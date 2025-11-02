@@ -5,9 +5,6 @@ import '../styles/CalificacionesCorte.css'
 import { HiClipboardList } from 'react-icons/hi'
 import { IoArrowBack } from 'react-icons/io5'
 
-const imgFrame2 = "https://www.figma.com/api/mcp/asset/eedd4e0f-73aa-4ec0-a2cd-ef8097563442"
-const imgImage1 = "https://www.figma.com/api/mcp/asset/b1b9168a-820a-4612-8233-27ac929197c2"
-const imgImage2 = "https://www.figma.com/api/mcp/asset/27d69c35-157b-40e6-9683-e3d298cc8d79"
 const imgMateria = "https://www.figma.com/api/mcp/asset/7d8473eb-a993-453c-8010-e8138a167005"
 
 export default function CalificacionesCorte() {
@@ -65,7 +62,7 @@ export default function CalificacionesCorte() {
 
   return (
     <div className="calificaciones-corte">
-      <Header imgFrame2={imgFrame2} imgImage1={imgImage1} imgImage2={imgImage2} />
+      <Header />
       
       <div className="calificaciones-corte__content">
         <Link to="/calificaciones" className="calificaciones-corte__back">

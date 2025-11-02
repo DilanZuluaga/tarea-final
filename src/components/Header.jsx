@@ -5,15 +5,15 @@ import { MdEmail } from 'react-icons/md'
 import { HiMenu } from 'react-icons/hi'
 import '../styles/Header.css'
 
-export default function Header({ imgFrame2, imgImage1, imgImage2 }) {
+// Logo oficial de la Universidad ECCI
+const ECCI_LOGO = "https://www.ecci.edu.co/wp-content/uploads/2025/03/logo-ecci.png"
+
+export default function Header() {
   return (
     <header className="header">
       <div className="header__logo-container">
         <Link to="/inicio" className="header__logo">
-          <img src={imgFrame2} alt="ECCI Logo" className="header__logo-bg" />
-          <div className="header__logo-avatar">
-            <img src={imgImage2} alt="Student" className="header__avatar-image" />
-          </div>
+          <img src={ECCI_LOGO} alt="Universidad ECCI Logo" className="header__logo-img" />
         </Link>
       </div>
       

@@ -4,10 +4,6 @@ import '../styles/Notificaciones.css'
 import { IoNotificationsSharp } from 'react-icons/io5'
 import { MdEmail } from 'react-icons/md'
 
-const imgFrame2 = "https://www.figma.com/api/mcp/asset/eedd4e0f-73aa-4ec0-a2cd-ef8097563442"
-const imgImage1 = "https://www.figma.com/api/mcp/asset/b1b9168a-820a-4612-8233-27ac929197c2"
-const imgImage2 = "https://www.figma.com/api/mcp/asset/27d69c35-157b-40e6-9683-e3d298cc8d79"
-
 export default function Notificaciones() {
   const notificaciones = [
     {
@@ -48,7 +44,7 @@ export default function Notificaciones() {
 
   return (
     <div className="notificaciones">
-      <Header imgFrame2={imgFrame2} imgImage1={imgImage1} imgImage2={imgImage2} />
+      <Header />
       
       <div className="notificaciones__content">
         <div className="notificaciones__header">

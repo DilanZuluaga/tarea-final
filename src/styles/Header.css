@@ -12,42 +12,33 @@
 }
 
 .header__logo-container {
-  flex: 0 0 453px;
+  flex: 0 0 auto;
   height: 103px;
   position: relative;
+  width: auto;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
 }
 
 .header__logo {
-  display: block;
-  width: 100%;
+  display: flex;
+  align-items: center;
   height: 100%;
-  position: relative;
   text-decoration: none;
   cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
-.header__logo-bg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.header__logo:hover {
+  opacity: 0.8;
+}
+
+.header__logo-img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
   display: block;
-}
-
-.header__logo-avatar {
-  position: absolute;
-  left: 21px;
-  top: 31px;
-  width: 47px;
-  height: 47px;
-  border-radius: 50%;
-  overflow: hidden;
-  background-color: #e3e3e3;
-}
-
-.header__avatar-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .header__icons {

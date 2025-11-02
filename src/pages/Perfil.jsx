@@ -3,15 +3,12 @@ import Header from '../components/Header'
 import '../styles/Perfil.css'
 import { BsPersonCircle } from 'react-icons/bs'
 
-const imgFrame2 = "https://www.figma.com/api/mcp/asset/eedd4e0f-73aa-4ec0-a2cd-ef8097563442"
-const imgImage1 = "https://www.figma.com/api/mcp/asset/b1b9168a-820a-4612-8233-27ac929197c2"
-const imgImage2 = "https://www.figma.com/api/mcp/asset/27d69c35-157b-40e6-9683-e3d298cc8d79"
 const imgStudentPhoto = "https://www.figma.com/api/mcp/asset/8805b411-0a6f-4b41-8e0d-b70fc8154b8b"
 
 export default function Perfil() {
   return (
     <div className="perfil">
-      <Header imgFrame2={imgFrame2} imgImage1={imgImage1} imgImage2={imgImage2} />
+      <Header />
       
       <div className="perfil__content">
         <div className="perfil__header">

@@ -4,7 +4,7 @@ import MenuButton from '../components/MenuButton'
 import Header from '../components/Header'
 
 // URLs de imágenes CORRECTAS desde Figma
-const imgImage2 = "https://www.figma.com/api/mcp/asset/b77016dd-227d-4356-8113-0a8b2864d6fa"
+const imgImage2 = "https://www.figma.com/api/mcp/asset/f5036244-62c1-4bb8-a592-54daa303adf3"
 const imgImagenDeWhatsApp20250930ALas153733Bd0A809D2 = "https://www.figma.com/api/mcp/asset/766afaa4-8cb5-4ce0-bcf1-53dfc8118a3d"
 const imgFrame5 = "https://www.figma.com/api/mcp/asset/4f02fd32-5c1a-4cf5-b32c-2fc289026be3"
 const imgFrame6 = "https://www.figma.com/api/mcp/asset/926b59c9-eed9-4fbe-9ca4-af0b67640f5c"
@@ -14,10 +14,10 @@ const imgCapa3 = "https://www.figma.com/api/mcp/asset/b4db02f7-c7f8-4a87-9afa-34
 const imgCapa4 = "https://www.figma.com/api/mcp/asset/b200bf6f-90e0-4d87-8ecb-edd532145934"
 const imgCapa5 = "https://www.figma.com/api/mcp/asset/d2961351-478f-42ba-b86e-fd4f403e1124"
 const imgGroup13 = "https://www.figma.com/api/mcp/asset/6632da58-64b4-4527-ad20-278afc5f893a"
-const imgImage1 = "https://www.figma.com/api/mcp/asset/32521912-682f-444d-9c49-b2a9cd6aede3"
+const imgImage1 = "https://www.figma.com/api/mcp/asset/f727db72-a040-4c30-a50b-c7f8a6a10f58"
 const imgImagenDeWhatsApp20250930ALas153733Bd0A809D1 = "https://www.figma.com/api/mcp/asset/40495f03-0cdd-4613-ac11-783870ac7417"
 const imgImg = "https://www.figma.com/api/mcp/asset/3250f043-99cb-4de7-b2c2-7322a93250e9"
-const imgFrame2 = "https://www.figma.com/api/mcp/asset/bd72bcdb-002a-4b5d-8f84-2ce09f83920b"
+const imgFrame2 = "https://www.ecci.edu.co/wp-content/uploads/2025/03/logo-ecci.png"
 
 const menuItems = [
   {
@@ -67,19 +67,13 @@ const menuItems = [
     title: "Consultar calificaciones",
     icon: imgGroup13,
     href: "/calificaciones"
-  },
-  {
-    id: 9,
-    title: "Perfil estudiante",
-    icon: imgCapa4,
-    href: "/perfil"
   }
 ]
 
 export default function InicioDesktop() {
   return (
     <div className="inicio-desktop">
-      <Header imgFrame2={imgFrame2} imgImage1={imgImage1} imgImage2={imgImage2} />
+      <Header />
       
       <div className="inicio-desktop__content">
         <div className="inicio-desktop__left">
