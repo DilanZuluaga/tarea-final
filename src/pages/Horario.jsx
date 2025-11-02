@@ -2,12 +2,12 @@ import React from 'react'
 import Header from '../components/Header'
 import '../styles/Horario.css'
 import { BsCalendar3 } from 'react-icons/bs'
+import imgProgramacion from '../../HORARIO/PRORAMECION lll.png'
+import imgGestion from '../../HORARIO/gestion empresarial.png'
+import imgTelecomunicaciones from '../../HORARIO/telecomunicaciones.png'
 
-// Imágenes de las clases desde assets locales
+// Imagen de biología desde public
 const imgBiologia = "/assets/horario/biologia.png"
-const imgProgramacion = "/assets/horario/programacion-nueva.png"
-const imgGestion = "/assets/horario/gestion-nueva.png"
-const imgTelecomunicaciones = "/assets/horario/telecom-nueva.png"
 
 export default function Horario() {
   const clasesHoy = [

@@ -87,6 +87,7 @@
 
 .horario__clase-card {
   display: flex;
+  align-items: center;
   gap: 20px;
   padding: 25px;
   background-color: #ffffff;
@@ -101,18 +102,21 @@
 }
 
 .horario__clase-imagen {
-  width: 163px;
-  height: 109px;
+  width: 120px;
+  height: 80px;
   border-radius: 8px;
   overflow: hidden;
   background-color: #f0f0f0;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .horario__clase-imagen img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .horario__clase-info {
@@ -161,6 +165,11 @@
   .horario__section-title {
     text-align: center;
   }
+
+  .horario__clase-imagen {
+    width: 100px;
+    height: 70px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -180,10 +189,10 @@
     flex-direction: column;
     padding: 20px;
   }
-  
+
   .horario__clase-imagen {
     width: 100%;
-    height: 150px;
+    height: 120px;
   }
   
   .horario__clase-info h3 {
