@@ -17,7 +17,6 @@ const imgGroup13 = "https://www.figma.com/api/mcp/asset/6632da58-64b4-4527-ad20-
 const imgImage1 = "https://www.figma.com/api/mcp/asset/f727db72-a040-4c30-a50b-c7f8a6a10f58"
 const imgImagenDeWhatsApp20250930ALas153733Bd0A809D1 = "https://www.figma.com/api/mcp/asset/40495f03-0cdd-4613-ac11-783870ac7417"
 const imgImg = "https://www.figma.com/api/mcp/asset/3250f043-99cb-4de7-b2c2-7322a93250e9"
-const imgFrame2 = "https://www.ecci.edu.co/wp-content/uploads/2025/03/logo-ecci.png"
 
 const menuItems = [
   {

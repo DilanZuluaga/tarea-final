@@ -82,10 +82,11 @@ Each component/page has a corresponding CSS file in `src/styles/`. Styles are co
 
 **Images**: The project uses Figma asset URLs for icons and images. These are defined as constants at the top of component files (e.g., in `InicioDesktop.jsx`).
 
-**ECCI Logo**: Loaded from the official Universidad ECCI website:
+**ECCI Logo**: Imported as a local asset from the project root:
 ```javascript
-const ECCI_LOGO = "https://www.ecci.edu.co/wp-content/uploads/2025/03/logo-ecci.png"
+import ecciLogo from '../../Logo.png'
 ```
+The logo file is located at `Logo.png` in the project root directory and is used in the Header component.
 
 ### Data Flow
 

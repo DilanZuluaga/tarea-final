@@ -4,16 +4,14 @@ import { IoMdNotifications } from 'react-icons/io'
 import { MdEmail } from 'react-icons/md'
 import { HiMenu } from 'react-icons/hi'
 import '../styles/Header.css'
-
-// Logo oficial de la Universidad ECCI
-const ECCI_LOGO = "https://www.ecci.edu.co/wp-content/uploads/2025/03/logo-ecci.png"
+import ecciLogo from '../../Logo.png'
 
 export default function Header() {
   return (
     <header className="header">
       <div className="header__logo-container">
         <Link to="/inicio" className="header__logo">
-          <img src={ECCI_LOGO} alt="Universidad ECCI Logo" className="header__logo-img" />
+          <img src={ecciLogo} alt="Universidad ECCI Logo" className="header__logo-img" />
         </Link>
       </div>
       
