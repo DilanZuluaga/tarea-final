@@ -108,8 +108,10 @@ docker image prune -a
 
 ```
 ├── Dockerfile              # Dockerfile multi-stage para producción
-├── nginx.conf              # Configuración de Nginx
+├── nginx.conf.template     # Plantilla de configuración de Nginx (con variable PORT)
+├── docker-entrypoint.sh    # Script de inicio con configuración dinámica
 ├── .dockerignore          # Archivos excluidos del build
+├── .gitattributes         # Configuración de line endings para scripts
 └── DOCKER.md              # Esta documentación
 ```
 
@@ -135,6 +137,8 @@ El Dockerfile usa dos etapas:
 - **Cache de assets**: Archivos estáticos cacheados por 1 año
 - **React Router**: Todas las rutas redirigen a index.html
 - **Headers de seguridad**: X-Frame-Options, X-Content-Type-Options, etc.
+- **Puerto dinámico**: Compatible con Railway y otros servicios cloud que asignan puertos dinámicamente
+- **Health check**: Endpoint `/health` para monitoreo
 
 ## Cambiar el Puerto
 
@@ -146,6 +150,21 @@ docker run -d -p 8080:80 --name plataforma-academica plataforma-academica:latest
 ```
 
 La aplicación estará en: http://localhost:8080
+
+## Probar Configuración de Railway Localmente
+
+Para simular cómo funcionará en Railway (con puerto dinámico):
+
+```bash
+# Ejecutar con PORT variable (simula Railway)
+docker run -d -p 3000:8080 -e PORT=8080 --name plataforma-academica plataforma-academica:latest
+
+# Verificar que está escuchando en el puerto correcto
+docker logs plataforma-academica | grep "Configured to listen"
+
+# Probar health check
+curl http://localhost:3000/health
+```
 
 ## Actualizar la Aplicación
 
@@ -196,6 +215,10 @@ docker rmi plataforma-academica:latest
 # Construir sin cache
 docker build --no-cache -t plataforma-academica:latest .
 ```
+
+### Error: "exec /docker-entrypoint.sh: no such file or directory"
+**Causa**: Problema con line endings de Windows (CRLF vs LF).
+**Solución**: El Dockerfile automáticamente convierte los line endings durante el build usando `sed`. Si modificas el script `docker-entrypoint.sh`, asegúrate de que el archivo `.gitattributes` esté presente para mantener los line endings correctos.
 
 ## Limpieza del Sistema
 
