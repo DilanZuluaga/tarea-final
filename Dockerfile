@@ -28,9 +28,9 @@ COPY nginx.conf.template /etc/nginx/templates/default.conf.template
 # Copiar los archivos construidos desde la etapa anterior
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Copiar script de inicio
+# Copiar script de inicio y convertir line endings
 COPY docker-entrypoint.sh /docker-entrypoint.sh
-RUN chmod +x /docker-entrypoint.sh
+RUN sed -i 's/\r$//' /docker-entrypoint.sh && chmod +x /docker-entrypoint.sh
 
 # Exponer el puerto (Railway lo asignará dinámicamente)
 EXPOSE ${PORT:-80}
